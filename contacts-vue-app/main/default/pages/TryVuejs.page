@@ -1,0 +1,61 @@
+<apex:page doctype="html-5.0" 
+  standardStylesheets="false" 
+  showChat="false" 
+  applyBodyTag="false" 
+  controller="TryVuejsController"
+  showHeader="false" 
+  sidebar="false">
+
+<apex:remoteObjects jsNamespace="WIPDeveloperModels">
+  <apex:remoteObjectModel name="Contact" 
+    fields="Id,Name,MobilePhone,Email,Title,Department,LeadSource,Level__c,Languages__c" />
+</apex:remoteObjects>
+
+
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <div id="main" class="container-fluid">
+    <div class="page-header">
+      <h1>
+        {{ header }}
+        <small>{{ subHeader }}</small>
+      </h1>
+    </div>
+    <router-view></router-view>
+  </div>
+
+  <script src="{!URLFOR($Resource.TryVuejs, '/libs/vue.js')}"></script>
+  <script src="{!URLFOR($Resource.TryVuejs, '/libs/vue-router.js')}"></script>
+
+  <!--Remote Actions -->
+  <script src="{!URLFOR($Resource.TryVuejs, '/app/services/sf.service.remoteActions.js')}"></script>
+  
+  <!-- Remote Objects -->
+  <!--<script src="{!URLFOR($Resource.TryVuejs, '/app/services/sf.service.remoteObjects.js')}"></script>-->
+
+
+  <script src="{!URLFOR($Resource.TryVuejs, '/app/services/eventHub.service.js')}"></script>
+  <script src="{!URLFOR($Resource.TryVuejs, '/app/components/contact-detail.js')}"></script>
+  <script src="{!URLFOR($Resource.TryVuejs, '/app/components/contacts.js')}"></script>
+  <script src="{!URLFOR($Resource.TryVuejs, '/app/components/edit-contact.js')}"></script>
+  <script src="{!URLFOR($Resource.TryVuejs, '/app/components/new-contact.js')}"></script>
+  <script src="{!URLFOR($Resource.TryVuejs, '/app/components/overlay.js')}"></script>
+  <script src="{!URLFOR($Resource.TryVuejs, '/app/app.js')}"></script>
+
+
+ 
+  <apex:stylesheet value="{!URLFOR($Resource.bootstrap, '/bootstrap-3.3.7-dist/css/bootstrap.css')}" />
+
+    </body>
+</html>
+</apex:page>

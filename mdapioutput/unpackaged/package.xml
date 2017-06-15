@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ContactsVue</fullName>
+    <types>
+        <members>TryVuejsController</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>TryVuejs</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>Contact.Languages__c</members>
+        <members>Contact.Level__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>TryVuejs</members>
+        <members>bootstrap</members>
+        <name>StaticResource</name>
+    </types>
+    <version>40.0</version>
+</Package>
