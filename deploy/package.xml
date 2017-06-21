@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+  <types>
+    <name>ApexClass</name>
+    <members>TryVuejsController</members>
+  </types>
+  <types>
+    <name>CustomObject</name>
+    <members>Contact</members>
+  </types>
+  <types>
+    <name>ApexPage</name>
+    <members>TryVuejs</members>
+  </types>
+  <types>
+    <name>StaticResource</name>
+    <members>TryVuejs</members>
+    <members>bootstrap</members>
+  </types>
+  <version>40.0</version>
+</Package>
