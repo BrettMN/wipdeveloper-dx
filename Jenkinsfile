@@ -41,10 +41,10 @@ node {
                 error 'push failed'
             }
             // assign permset
-            rc = sh returnStatus: true, script: "${toolbelt}/sfdx force:user:permset:assign --targetusername ${SFDC_USERNAME} --permsetname DreamHouse"
-            if (rc != 0) {
-                error 'permset:assign failed'
-            }
+            // rc = sh returnStatus: true, script: "${toolbelt}/sfdx force:user:permset:assign --targetusername ${SFDC_USERNAME} --permsetname WIPDeveloperDX"
+            // if (rc != 0) {
+            //     error 'permset:assign failed'
+            // }
         }
 
         stage('Run Apex Test') {
