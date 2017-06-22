@@ -11,6 +11,14 @@ node {
     def JWT_KEY_CRED_ID = env.JWT_CRED_ID_DH
     def CONNECTED_APP_CONSUMER_KEY=env.CONNECTED_APP_CONSUMER_KEY_DH
 
+
+    printf BUILD_NUMBER
+    printf RUN_ARTIFACT_DIR
+    printf HUB_ORG
+    printf SFDC_HOST
+    printf JWT_KEY_CRED_ID
+    printf CONNECTED_APP_CONSUMER_KEY
+
     def toolbelt = tool 'toolbelt'
 
     stage('checkout source') {
